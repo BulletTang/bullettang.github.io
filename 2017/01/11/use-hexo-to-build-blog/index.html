@@ -84,7 +84,7 @@
 
 
 
-<meta name="description" content="Github Pages是什么
+<meta name="description" content="Github Pages 是什么
 由用户编写的，托管在 Github 上的静态网页， Github 推出 Pages 功能，本意是允许用户自定义项目首页，用来替代默认的源码列表，但是也有很多人用它来托管自己的个人博客。
 
 Hexo 是什么
@@ -93,15 +93,15 @@ Hexo 是一个快速、简洁且高效的博客框架。">
 <meta property="og:title" content="使用 Github Pages 和 Hexo 建立个人博客">
 <meta property="og:url" content="http://bullettang.github.io/2017/01/11/use-hexo-to-build-blog/index.html">
 <meta property="og:site_name" content="BulletTang's Notes">
-<meta property="og:description" content="Github Pages是什么
+<meta property="og:description" content="Github Pages 是什么
 由用户编写的，托管在 Github 上的静态网页， Github 推出 Pages 功能，本意是允许用户自定义项目首页，用来替代默认的源码列表，但是也有很多人用它来托管自己的个人博客。
 
 Hexo 是什么
 Hexo 是一个快速、简洁且高效的博客框架。">
-<meta property="og:updated_time" content="2017-01-12T10:40:09.745Z">
+<meta property="og:updated_time" content="2017-01-12T17:06:52.927Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Github Pages 和 Hexo 建立个人博客">
-<meta name="twitter:description" content="Github Pages是什么
+<meta name="twitter:description" content="Github Pages 是什么
 由用户编写的，托管在 Github 上的静态网页， Github 推出 Pages 功能，本意是允许用户自定义项目首页，用来替代默认的源码列表，但是也有很多人用它来托管自己的个人博客。
 
 Hexo 是什么
@@ -402,7 +402,7 @@ Hexo 是一个快速、简洁且高效的博客框架。">
       
 
       
-        <h2 id="Github-Pages是什么"><a href="#Github-Pages是什么" class="headerlink" title="Github Pages是什么"></a>Github Pages是什么</h2><blockquote>
+        <h2 id="Github-Pages-是什么"><a href="#Github-Pages-是什么" class="headerlink" title="Github Pages 是什么"></a>Github Pages 是什么</h2><blockquote>
 <p>由用户编写的，托管在 Github 上的静态网页， Github 推出 Pages 功能，本意是允许用户自定义项目首页，用来替代默认的源码列表，但是也有很多人用它来托管自己的个人博客。</p>
 </blockquote>
 <h2 id="Hexo-是什么"><a href="#Hexo-是什么" class="headerlink" title="Hexo 是什么"></a>Hexo 是什么</h2><blockquote>
@@ -410,21 +410,19 @@ Hexo 是一个快速、简洁且高效的博客框架。">
 </blockquote>
 <a id="more"></a>
 <h2 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h2><ul>
-<li><p><a href="https://git-scm.com/" target="_blank" rel="external"> Git 下载地址</a><br>选择对应版本，下载后安装即可</p>
+<li><p><a href="https://git-scm.com/" target="_blank" rel="external">Git 下载地址</a><br>  选择对应版本，下载后安装即可</p>
 </li>
 <li><p>配置用户名与邮箱</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user<span class="selector-class">.name</span> <span class="string">"username"</span>  <span class="comment">//使用你的用户名替换username</span></div><div class="line">git config --global user<span class="selector-class">.email</span> <span class="string">"email"</span>    <span class="comment">//使用你的邮箱替换email</span></div></pre></td></tr></table></figure>
+  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user<span class="selector-class">.name</span> <span class="string">"username"</span>  <span class="comment">//使用你的用户名替换username</span></div><div class="line">git config --global user<span class="selector-class">.email</span> <span class="string">"email"</span>    <span class="comment">//使用你的邮箱替换email</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>配置 Github SSH Key<br>使用 SSH Key 可以使我们 push 更新到 Github 时无需输入用户名与密码。</p>
+<li><p>配置 Github SSH Key<br>  使用 SSH Key 可以使我们 push 更新到 Github 时无需输入用户名与密码。</p>
 <ul>
 <li><p>生成公钥与私钥</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -<span class="selector-tag">b</span> <span class="number">4096</span> -C <span class="string">"email"</span>   <span class="comment">//使用你的邮箱替换email</span></div></pre></td></tr></table></figure>
-<p>执行成功后，会在用户目录( C:\Users\用户名)内出现 <code>.ssh</code> 文件夹，里面有公钥 <code>id_rsa.pub</code> 和私钥 <code>id_rsa</code> 两个文件。</p>
+  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -<span class="selector-tag">b</span> <span class="number">4096</span> -C <span class="string">"email"</span>   <span class="comment">//使用你的邮箱替换email</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>添加到 Github Settings<br>打开 <code>id_rsa.pub</code>，复制里面的内容。<br>登陆 <code>Github</code> ，点击右上角 <code>Settings</code> ，点击 <code>SSH And  GPG keys</code> ，<code>New SSH Key</code> ，将复制的内容粘贴在 Key 中 ，点击 <code>Add SSH Key</code>。</p>
+<li><p>添加到 Github Settings<br>  打开 id_rsa.pub，复制里面的内容。<br>  登陆 Github ，点击右上角 Settings ，点击 SSH And GPG keys ，New SSH Key ，将复制的内容粘贴在 Key 中 ，点击 Add SSH Key。</p>
 </li>
-<li><p>测试 SSH 是否配置成功</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure>
+<li>测试 SSH 是否配置成功  <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -432,12 +430,12 @@ Hexo 是一个快速、简洁且高效的博客框架。">
 <h2 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h2><p><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js下载地址</a> 下载安装即可。</p>
 <h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-<span class="keyword">cli</span></div></pre></td></tr></table></figure>
 <h2 id="创建网站"><a href="#创建网站" class="headerlink" title="创建网站"></a>创建网站</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo init <span class="symbol">&lt;folder&gt;</span></div><div class="line"><span class="keyword">cd</span> <span class="symbol">&lt;folder&gt;</span></div><div class="line">npm install</div></pre></td></tr></table></figure>
-<p>这时候已经可以用 <code>hexo s</code> 命令进行本地预览网页，访问地址 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
-<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>主要是站点根目录下的 <code>_config.yml</code> 文件，找到 <code>deploy</code> 部分。</p>
+<p>这时候已经可以用 hexo s 命令进行本地预览网页，访问地址 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
+<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>主要是站点根目录下的 _config.yml 文件，找到 deploy 部分。</p>
 <p>修改为：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.com/username/username.github.io.git</div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
-<p>repository 部分需要修改为个人在 Github 上创建的仓库地址，名称必须为 <code>username</code>.github.io ， username 替换为 Github 用户名。</p>
+<p>repository 部分需要修改为个人在 Github 上创建的仓库地址，名称必须为 username.github.io ， username 替换为 Github 用户名。</p>
 <h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><ul>
-<li><p>首次需要安装 <code>hexo-deployer-git</code></p>
+<li><p>首次需要安装 hexo-deployer-git</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>生成静态网页</p>
@@ -450,11 +448,11 @@ Hexo 是一个快速、简洁且高效的博客框架。">
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo deploy</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="Hexo-主题"><a href="#Hexo-主题" class="headerlink" title="Hexo 主题"></a>Hexo 主题</h2><p>通过修改 <code>_config.yml</code> 文件中的 theme 字段可以更换主题。<br>本博客使用的是 <a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT</a> 主题 ，该主题作者提供了完善的配置文档说明，详细配置可自行查看。</p>
+<h2 id="Hexo-主题"><a href="#Hexo-主题" class="headerlink" title="Hexo 主题"></a>Hexo 主题</h2><p>通过修改 <code>_config.yml</code> 文件中的 <code>theme</code> 字段可以更换主题。<br>本博客使用的是 <a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT</a> 主题 ，该主题作者提供了完善的配置文档说明，详细配置可自行查看。</p>
 <h2 id="写作命令"><a href="#写作命令" class="headerlink" title="写作命令"></a>写作命令</h2><ul>
 <li><p>新建文章</p>
 <figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">new</span> [layout] &lt;<span class="built_in">title</span>&gt;</div></pre></td></tr></table></figure>
-<p>  执行后会在 <code>source/_post</code> 目录中生成一个 <code>.md</code> 格式的文件，直接打开使用 markdown 语法进行写作即可。</p>
+<p>  执行后会在 source/_post 目录中生成一个 .md 格式的文件，直接打开使用 markdown 语法进行写作即可。</p>
 </li>
 <li><p>更新站点<br>文章编辑完成后，通过以下命令完成更新与发布。</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo d -g</span></div></pre></td></tr></table></figure>
@@ -651,7 +649,7 @@ Hexo 是一个快速、简洁且高效的博客框架。">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Pages是什么"><span class="nav-number">1.</span> <span class="nav-text">Github Pages是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-是什么"><span class="nav-number">2.</span> <span class="nav-text">Hexo 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Git"><span class="nav-number">3.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Node-js"><span class="nav-number">4.</span> <span class="nav-text">安装 Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">5.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建网站"><span class="nav-number">6.</span> <span class="nav-text">创建网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改配置"><span class="nav-number">7.</span> <span class="nav-text">修改配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到Github"><span class="nav-number">8.</span> <span class="nav-text">部署到Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-主题"><span class="nav-number">9.</span> <span class="nav-text">Hexo 主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写作命令"><span class="nav-number">10.</span> <span class="nav-text">写作命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Pages-是什么"><span class="nav-number">1.</span> <span class="nav-text">Github Pages 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-是什么"><span class="nav-number">2.</span> <span class="nav-text">Hexo 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Git"><span class="nav-number">3.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Node-js"><span class="nav-number">4.</span> <span class="nav-text">安装 Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">5.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建网站"><span class="nav-number">6.</span> <span class="nav-text">创建网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改配置"><span class="nav-number">7.</span> <span class="nav-text">修改配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到Github"><span class="nav-number">8.</span> <span class="nav-text">部署到Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-主题"><span class="nav-number">9.</span> <span class="nav-text">Hexo 主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写作命令"><span class="nav-number">10.</span> <span class="nav-text">写作命令</span></a></li></ol></div>
             
 
           </div>
