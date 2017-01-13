@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Git 常用命令]]></title>
+      <url>%2F2017%2F01%2F13%2Fgit-usage%2F</url>
+      <content type="text"><![CDATA[创建版本库 初始化仓库 1git init 添加文件到仓库 1git add 提交文件到仓库 1git commit 本地仓库管理 查看仓库状态 1git status 查看仓库修改内容 1git diff 查看提交历史 1git log 查看命令历史 1git reflog 从版本库中删除文件 1git rm file 回退版本Git 使用 HEAD 表示当前版本， HEAD^ 表示上一个版本， HEAD^^ 表示上上个版本， HEAD~10 表示往上10个版本。 12git reset --hard HEAD^ //回退到上一个版本git reset --hard 362345 //回退到版本 362345... Git的版本号不需要写全，只需要写前几位。 撤销工作区文件修改让文件回到最近一次 commit 或 add 状态。 1git checkout --file 撤销暂存区文件修改 1git reset HEAD file 总结 场景1 当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令 git checkout -- file 。 场景2 当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令 git reset HEAD file ，就回到了场景1，第二步按场景1操作。 场景3 已经提交了不合适的修改到版本库时，想要撤销本次提交，使用 git reset --hard 版本id，不过前提是没有推送到远程库。 远程仓库 创建 SSH Key 1ssh-keygen -t rsa -C "youremail@example.com" 克隆仓库 1git clone git@github.com/username/repository.git // ssh 协议比 https 协议快 关联远程仓库 1git remote add origin git@github.com:username/repository.git 推送到远程仓库 12git push -u origin master //第一次推送git push origin master //之后可以不使用 -u 分支管理 创建与合并分支 1git checkout -b dev //创建并切换到dev分支 上面的命令等同于 12git branch devgit checkout dev 合并指定分支到当前分支 1git merge dev 删除分支 1git branch -d dev 多人协助 查看远程库信息，使用 git remote -v； 本地新建的分支如果不推送到远程，对其他人就是不可见的； 从本地推送分支，使用 git push origin branch-name，如果推送失败，先用 git pull 抓取远程的新提交； 在本地创建和远程分支对应的分支，使用 git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致； 建立本地分支和远程分支的关联，使用 git branch --set-upstream branch-name origin/branch-name； 从远程抓取分支，使用 git pull，如果有冲突，要先处理冲突。 标签管理 创建标签 123git tag v1.0git tag v1.0 622837git tag -a v1.0 -m "balabala..." 操作标签 命令git push origin 可以推送一个本地标签； 命令git push origin –tags可以推送全部未推送过的本地标签； 命令git tag -d 可以删除一个本地标签； 命令git push origin :refs/tags/可以删除一个远程标签。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[中文文案排版技巧]]></title>
       <url>%2F2017%2F01%2F13%2Fchinese-copywriting-guidelines%2F</url>
       <content type="text"><![CDATA[原文: https://github.com/mzlogin/chinese-copywriting-guidelines 统一中文文案、排版的相关用法，降低团队成员之间的沟通成本，增强网站气质。 空格 中英文之间需要增加空格 例外：「豆瓣FM」等产品名词，按照官方所定义的格式书写。 中文与数字之间需要增加空格 数字与单位之间需要增加空格 例外：度／百分比与数字之间不需要增加空格： 全角标点与其他字符之间不加空格 标点符号 不重复使用标点符号 全角和半角 使用全角中文标点 数字使用半角字符 例外：在设计稿、宣传海报中如出现极少量数字的情形时，为方便文字对齐，是可以使用全角数字的。 遇到完整的英文整句、特殊名词，其內容使用半角标点 名词 专有名词使用正确的大小写 不要使用不地道的缩写 争议 链接之间增加空格 简体中文使用直角引号]]></content>
