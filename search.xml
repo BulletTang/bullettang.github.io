@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[中文文案排版技巧]]></title>
+      <url>%2F2017%2F01%2F13%2Fchinese-copywriting-guidelines%2F</url>
+      <content type="text"><![CDATA[原文: https://github.com/mzlogin/chinese-copywriting-guidelines 统一中文文案、排版的相关用法，降低团队成员之间的沟通成本，增强网站气质。 空格 中英文之间需要增加空格 例外：「豆瓣FM」等产品名词，按照官方所定义的格式书写。 中文与数字之间需要增加空格 数字与单位之间需要增加空格 例外：度／百分比与数字之间不需要增加空格： 全角标点与其他字符之间不加空格 标点符号 不重复使用标点符号 全角和半角 使用全角中文标点 数字使用半角字符 例外：在设计稿、宣传海报中如出现极少量数字的情形时，为方便文字对齐，是可以使用全角数字的。 遇到完整的英文整句、特殊名词，其內容使用半角标点 名词 专有名词使用正确的大小写 不要使用不地道的缩写 争议 链接之间增加空格 简体中文使用直角引号]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[关于使用 Git 过程中出现的换行符 warning]]></title>
       <url>%2F2017%2F01%2F12%2Fgit-warning-lf%2F</url>
       <content type="text"><![CDATA[问题描述在 Windows 平台执行 git add 时，有时候会出现下列提示：12warning: LF will be replaced by CRLF in XXX.The file will have its original line endings in your working directory. 解决方法1git config --global core.autocrlf false 原因 LF 和 CRLF 是什么 LF (ASCII 10, \n, 换行, Windows) CRLF (ASCII 13, \r, 回车, Linux/UNIX) 这两个字符都用于标识一行的结束，只不过 Windows 系统使用的是 CRLF , Linux/UNIX 系统使用的是 LF 。 core.autocrlf 默认为 true，检出时会把文本文件的换行符转换为 CRLF，提交时会把暂存区的内容转换为 LF ，然后放入版本库。 转化暂存区的内容时，如果发现里面存在 LF 换行符，LF 会被转化成 CRLF，并给出警告 LF will be replaced by CRLF 简单来说，设置 core.autocrlf=true 后，我们工作区的文件都应该用 CRLF 来换行，编辑器用 CRLF 换行，就不会出现警告了。]]></content>
