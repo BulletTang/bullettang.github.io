@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="BulletTang, Android" />
+  <meta name="keywords" content="文本操作栏," />
 
 
 
@@ -84,15 +84,22 @@
 
 
 
-<meta name="description" content="冰冻三尺非一日之寒">
-<meta property="og:type" content="website">
-<meta property="og:title" content="BulletTang's Notes">
-<meta property="og:url" content="http://bullettang.github.io/categories/其他/index.html">
+<meta name="description" content="这是 Android 6.0 之后新增的 API，涉及的主要是 ACTION_PROCESS_TEXT 。相关文档:
+
+http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCESS_TEXT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自定义文本操作栏action">
+<meta property="og:url" content="http://bullettang.github.io/2017/02/17/custom-text-action/index.html">
 <meta property="og:site_name" content="BulletTang's Notes">
-<meta property="og:description" content="冰冻三尺非一日之寒">
+<meta property="og:description" content="这是 Android 6.0 之后新增的 API，涉及的主要是 ACTION_PROCESS_TEXT 。相关文档:
+
+http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCESS_TEXT">
+<meta property="og:updated_time" content="2017-02-18T11:57:16.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BulletTang's Notes">
-<meta name="twitter:description" content="冰冻三尺非一日之寒">
+<meta name="twitter:title" content="自定义文本操作栏action">
+<meta name="twitter:description" content="这是 Android 6.0 之后新增的 API，涉及的主要是 ACTION_PROCESS_TEXT 。相关文档:
+
+http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCESS_TEXT">
 
 
 
@@ -120,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://bullettang.github.io/categories/其他/"/>
+  <link rel="canonical" href="http://bullettang.github.io/2017/02/17/custom-text-action/"/>
 
 
 
 
 
-  <title> 分类: 其他 | BulletTang's Notes </title>
+  <title> 自定义文本操作栏action | BulletTang's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,7 +164,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -272,103 +279,192 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        其他
-        <small>分类</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/01/13/git-usage/" itemprop="url">
-              
-                <span itemprop="name">Git 常用命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-01-13T15:40:04+08:00"
-              content="2017-01-13" >
-          01-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/01/13/chinese-copywriting-guidelines/" itemprop="url">
-              
-                <span itemprop="name">中文文案排版技巧</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-01-13T12:38:53+08:00"
-              content="2017-01-13" >
-          01-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/01/11/use-hexo-to-build-blog/" itemprop="url">
-              
-                <span itemprop="name">使用 Github Pages 和 Hexo 建立个人博客</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-01-11T16:38:54+08:00"
-              content="2017-01-11" >
-          01-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://bullettang.github.io/2017/02/17/custom-text-action/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="BulletTang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="BulletTang's Notes">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="BulletTang's Notes" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                自定义文本操作栏action
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-17T15:40:04+08:00">
+                2017-02-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android-6-0/" itemprop="url" rel="index">
+                    <span itemprop="name">Android 6.0</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/17/custom-text-action/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/17/custom-text-action/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这是 Android 6.0 之后新增的 API，涉及的主要是 ACTION_PROCESS_TEXT 。<br>相关文档:</p>
+<blockquote>
+<p><a href="http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCESS_TEXT" target="_blank" rel="external">http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCESS_TEXT</a></p>
+</blockquote>
+<a id="more"></a>
+<h3 id="创建一个action对应的Activity"><a href="#创建一个action对应的Activity" class="headerlink" title="创建一个action对应的Activity"></a>创建一个action对应的Activity</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".CustomTextActivity"</span></span></div><div class="line">           <span class="attr">android:label</span>=<span class="string">"自定义action"</span></div><div class="line">           &gt;</div><div class="line">           <span class="tag">&lt;<span class="name">intent-filter</span> &gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.PROCESS_TEXT"</span>/&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.DEFAULT"</span>/&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">data</span> <span class="attr">android:mimeType</span>=<span class="string">"text/plain"</span>/&gt;</span></div><div class="line">           <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>label属性是对应的action的显示名称。</p>
+<h3 id="获取选中的文本"><a href="#获取选中的文本" class="headerlink" title="获取选中的文本"></a>获取选中的文本</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">CustomTextActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="keyword">protected</span> void onCreate(<span class="type">Bundle</span> savedInstanceState) &#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(<span class="type">R</span>.layout.activity_custom_text);</div><div class="line">        <span class="keyword">if</span> (<span class="type">Build</span>.<span class="type">VERSION</span>.<span class="type">SDK_INT</span> &gt;= <span class="type">Build</span>.<span class="type">VERSION_CODES</span>.<span class="type">M</span>) &#123;</div><div class="line">            <span class="type">CharSequence</span> textContent = getIntent().getCharSequenceExtra(<span class="type">Intent</span>.<span class="type">EXTRA_PROCESS_TEXT</span>);</div><div class="line">            <span class="keyword">if</span> (!<span class="type">TextUtils</span>.isEmpty(textContent))&#123;</div><div class="line">                <span class="type">Toast</span>.makeText(<span class="keyword">this</span>,textContent,<span class="type">Toast</span>.<span class="type">LENGTH_LONG</span>).show();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>不能触发带有 ACTION_PROCESS_TEXT 的 Service ，只能是 Activity</li>
+<li>如果使用AppCompatActivity，且想在API 23+的设备上使用原生的文字选择工具栏，你的<code>EditText</code>应该有一个<code>android:id</code>并且需要调用 <code>getDelegate().setHandleNativeActionModesEnabled(false) ）</code>。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/文本操作栏/" rel="tag"># 文本操作栏</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/26/singleton-design-pattern/" rel="next" title="单例模式的几种写法">
+                <i class="fa fa-chevron-left"></i> 单例模式的几种写法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -376,6 +472,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/17/custom-text-action/"
+           data-title="自定义文本操作栏action" data-url="http://bullettang.github.io/2017/02/17/custom-text-action/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -395,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -472,6 +585,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个action对应的Activity"><span class="nav-number">1.</span> <span class="nav-text">创建一个action对应的Activity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取选中的文本"><span class="nav-number">2.</span> <span class="nav-text">获取选中的文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">3.</span> <span class="nav-text">注意事项</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -578,6 +707,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
