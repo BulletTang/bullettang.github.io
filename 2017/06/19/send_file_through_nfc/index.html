@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="文本操作栏," />
+  <meta name="keywords" content="Content Sharing," />
 
 
 
@@ -84,22 +84,28 @@
 
 
 
-<meta name="description" content="这是 Android 6.0 之后新增的 API，涉及的主要是 ACTION_PROCESS_TEXT 。相关文档:
-
-http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCESS_TEXT">
+<meta name="description" content="注意事项
+Android 4.1(API level 16)及更高才支持大文件传输.
+想要传输的文件必须保存在外部储存.
+传输的每个文件都必须是全局可读 world-readable,可通过 File.setReadable(true,false) 设置.
+必须提供想要传输的文件的 URI .Android Beam 文件传输不能处理 FileProvider.getUriForFile 生成的内">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自定义文本操作栏action">
-<meta property="og:url" content="http://bullettang.github.io/2017/02/17/custom-text-action/index.html">
+<meta property="og:title" content="通过 NFC 分享文件之发送文件">
+<meta property="og:url" content="http://bullettang.github.io/2017/06/19/send_file_through_nfc/index.html">
 <meta property="og:site_name" content="BulletTang's Notes">
-<meta property="og:description" content="这是 Android 6.0 之后新增的 API，涉及的主要是 ACTION_PROCESS_TEXT 。相关文档:
-
-http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCESS_TEXT">
-<meta property="og:updated_time" content="2017-02-18T11:57:16.304Z">
+<meta property="og:description" content="注意事项
+Android 4.1(API level 16)及更高才支持大文件传输.
+想要传输的文件必须保存在外部储存.
+传输的每个文件都必须是全局可读 world-readable,可通过 File.setReadable(true,false) 设置.
+必须提供想要传输的文件的 URI .Android Beam 文件传输不能处理 FileProvider.getUriForFile 生成的内">
+<meta property="og:updated_time" content="2017-06-19T09:22:24.493Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自定义文本操作栏action">
-<meta name="twitter:description" content="这是 Android 6.0 之后新增的 API，涉及的主要是 ACTION_PROCESS_TEXT 。相关文档:
-
-http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCESS_TEXT">
+<meta name="twitter:title" content="通过 NFC 分享文件之发送文件">
+<meta name="twitter:description" content="注意事项
+Android 4.1(API level 16)及更高才支持大文件传输.
+想要传输的文件必须保存在外部储存.
+传输的每个文件都必须是全局可读 world-readable,可通过 File.setReadable(true,false) 设置.
+必须提供想要传输的文件的 URI .Android Beam 文件传输不能处理 FileProvider.getUriForFile 生成的内">
 
 
 
@@ -127,13 +133,13 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
 
 
 
-  <link rel="canonical" href="http://bullettang.github.io/2017/02/17/custom-text-action/"/>
+  <link rel="canonical" href="http://bullettang.github.io/2017/06/19/send_file_through_nfc/"/>
 
 
 
 
 
-  <title> 自定义文本操作栏action | BulletTang's Notes </title>
+  <title> 通过 NFC 分享文件之发送文件 | BulletTang's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -289,7 +295,7 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://bullettang.github.io/2017/02/17/custom-text-action/">
+  <link itemprop="mainEntityOfPage" href="http://bullettang.github.io/2017/06/19/send_file_through_nfc/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="BulletTang">
@@ -313,7 +319,7 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
             
             
               
-                自定义文本操作栏action
+                通过 NFC 分享文件之发送文件
               
             
           </h2>
@@ -328,8 +334,8 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-17T15:40:04+08:00">
-                2017-02-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-19T17:15:04+08:00">
+                2017-06-19
               </time>
             
 
@@ -351,8 +357,8 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android-6-0/" itemprop="url" rel="index">
-                    <span itemprop="name">Android 6.0</span>
+                  <a href="/categories/Content-Sharing/" itemprop="url" rel="index">
+                    <span itemprop="name">Content Sharing</span>
                   </a>
                 </span>
 
@@ -369,8 +375,8 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/17/custom-text-action/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/17/custom-text-action/" itemprop="commentCount"></span>
+                <a href="/2017/06/19/send_file_through_nfc/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/19/send_file_through_nfc/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -396,18 +402,25 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
       
 
       
-        <p>这是 Android 6.0 之后新增的 API，涉及的主要是 ACTION_PROCESS_TEXT 。<br>相关文档:</p>
-<blockquote>
-<p><a href="http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCESS_TEXT" target="_blank" rel="external">http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCESS_TEXT</a></p>
-</blockquote>
-<a id="more"></a>
-<h3 id="创建一个action对应的Activity"><a href="#创建一个action对应的Activity" class="headerlink" title="创建一个action对应的Activity"></a>创建一个action对应的Activity</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".CustomTextActivity"</span></span></div><div class="line">           <span class="attr">android:label</span>=<span class="string">"自定义action"</span></div><div class="line">           &gt;</div><div class="line">           <span class="tag">&lt;<span class="name">intent-filter</span> &gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.PROCESS_TEXT"</span>/&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.DEFAULT"</span>/&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">data</span> <span class="attr">android:mimeType</span>=<span class="string">"text/plain"</span>/&gt;</span></div><div class="line">           <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>label属性是对应的action的显示名称。</p>
-<h3 id="获取选中的文本"><a href="#获取选中的文本" class="headerlink" title="获取选中的文本"></a>获取选中的文本</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">CustomTextActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="keyword">protected</span> void onCreate(<span class="type">Bundle</span> savedInstanceState) &#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(<span class="type">R</span>.layout.activity_custom_text);</div><div class="line">        <span class="keyword">if</span> (<span class="type">Build</span>.<span class="type">VERSION</span>.<span class="type">SDK_INT</span> &gt;= <span class="type">Build</span>.<span class="type">VERSION_CODES</span>.<span class="type">M</span>) &#123;</div><div class="line">            <span class="type">CharSequence</span> textContent = getIntent().getCharSequenceExtra(<span class="type">Intent</span>.<span class="type">EXTRA_PROCESS_TEXT</span>);</div><div class="line">            <span class="keyword">if</span> (!<span class="type">TextUtils</span>.isEmpty(textContent))&#123;</div><div class="line">                <span class="type">Toast</span>.makeText(<span class="keyword">this</span>,textContent,<span class="type">Toast</span>.<span class="type">LENGTH_LONG</span>).show();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>不能触发带有 ACTION_PROCESS_TEXT 的 Service ，只能是 Activity</li>
-<li>如果使用AppCompatActivity，且想在API 23+的设备上使用原生的文字选择工具栏，你的<code>EditText</code>应该有一个<code>android:id</code>并且需要调用 <code>getDelegate().setHandleNativeActionModesEnabled(false) ）</code>。</li>
+        <h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ol>
+<li>Android 4.1(API level 16)及更高才支持大文件传输.</li>
+<li>想要传输的文件必须保存在外部储存.</li>
+<li>传输的每个文件都必须是全局可读 world-readable,可通过 File.setReadable(true,false) 设置.</li>
+<li>必须提供想要传输的文件的 URI .Android Beam 文件传输不能处理 FileProvider.getUriForFile 生成的内容 URI. </li>
+</ol>
+<h4 id="需求权限"><a href="#需求权限" class="headerlink" title="需求权限"></a>需求权限</h4><ul>
+<li>NFC<br><code>&lt;uses-permission android:name=&quot;android.permission.NFC&quot; /&gt;</code></li>
+<li>读取外部储存<br><code>&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt;</code></li>
 </ul>
+<h4 id="需求硬件特性"><a href="#需求硬件特性" class="headerlink" title="需求硬件特性"></a>需求硬件特性</h4><ul>
+<li>NFC<br><code>&lt;uses-feature android:name=&quot;android.hardware.nfc&quot; android:required=&quot;true&quot; /&gt;</code></li>
+</ul>
+<a id="more"></a>
+<h4 id="检测设备是否支持-NFC"><a href="#检测设备是否支持-NFC" class="headerlink" title="检测设备是否支持 NFC"></a>检测设备是否支持 NFC</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="type">NfcAdapter</span> mNfcAdapter;</div><div class="line">    <span class="comment">// Flag to indicate that Android Beam is available</span></div><div class="line">    boolean mAndroidBeamAvailable  = <span class="literal">false</span>;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="keyword">protected</span> void onCreate(<span class="type">Bundle</span> savedInstanceState) &#123;</div><div class="line">        </div><div class="line">        <span class="comment">// NFC isn't available on the device</span></div><div class="line">        <span class="keyword">if</span> (!<span class="type">PackageManager</span>.hasSystemFeature(<span class="type">PackageManager</span>.<span class="type">FEATURE_NFC</span>)) &#123;</div><div class="line">            <span class="comment">/*</span></div><div class="line">             * Disable NFC features here.</div><div class="line">             * For example, disable menu items or buttons that activate</div><div class="line">             * NFC-related features</div><div class="line">             */</div><div class="line">            ...</div><div class="line">        <span class="comment">// Android Beam file transfer isn't supported</span></div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="type">Build</span>.<span class="type">VERSION</span>.<span class="type">SDK_INT</span> &lt;</div><div class="line">                <span class="type">Build</span>.<span class="type">VERSION_CODES</span>.<span class="type">JELLY_BEAN_MR1</span>) &#123;</div><div class="line">            <span class="comment">// If Android Beam isn't available, don't continue.</span></div><div class="line">            mAndroidBeamAvailable = <span class="literal">false</span>;</div><div class="line">            <span class="comment">/*</span></div><div class="line">             * Disable Android Beam file transfer features here.</div><div class="line">             */</div><div class="line">            ...</div><div class="line">        <span class="comment">// Android Beam file transfer is available, continue</span></div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">        mNfcAdapter = <span class="type">NfcAdapter</span>.getDefaultAdapter(<span class="keyword">this</span>);</div><div class="line">        ...</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="创建提供文件的接口方法"><a href="#创建提供文件的接口方法" class="headerlink" title="创建提供文件的接口方法"></a>创建提供文件的接口方法</h4><p>实现 NfcAdapter.CreateBeamUrisCallback 接口中的 createBeamUris() 方法,在方法中返回一个 Uri 数组.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">    ...</div><div class="line">    <span class="comment">// List of URIs to provide to Android Beam</span></div><div class="line">    <span class="keyword">private</span> <span class="type">Uri</span>[] mFileUris = <span class="keyword">new</span> <span class="type">Uri</span>[<span class="number">10</span>];</div><div class="line">    ...</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * Callback that Android Beam file transfer calls to get</div><div class="line">     * files to share</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">FileUriCallback</span> <span class="title">implements</span></span></div><div class="line">            <span class="type">NfcAdapter</span>.<span class="type">CreateBeamUrisCallback</span> &#123;</div><div class="line">        public <span class="type">FileUriCallback</span>() &#123;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">/**</span></div><div class="line">         * Create content URIs as needed to share with another device</div><div class="line">         */</div><div class="line">        <span class="meta">@Override</span></div><div class="line">        public <span class="type">Uri</span>[] createBeamUris(<span class="type">NfcEvent</span> event) &#123;</div><div class="line">            <span class="keyword">return</span> mFileUris;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="设置给-NfcAdapter"><a href="#设置给-NfcAdapter" class="headerlink" title="设置给 NfcAdapter"></a>设置给 NfcAdapter</h4><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mNfcAdapter.setBeamPushUrisCallback(mFileUriCallback,<span class="keyword">this</span>);</div></pre></td></tr></table></figure>
+<p>或者<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">NfcAdapter.setBeamPushUris()<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<h4 id="如何获取文件-URI"><a href="#如何获取文件-URI" class="headerlink" title="如何获取文件 URI"></a>如何获取文件 URI</h4><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">private <span class="built_in">Uri</span>[] mFileUris = <span class="keyword">new</span> <span class="built_in">Uri</span>[<span class="number">10</span>];</div><div class="line"><span class="built_in">String</span> transferFile = <span class="string">"transferimage.jpg"</span>;</div><div class="line">File extDir = getExternalFilesDir(<span class="keyword">null</span>);</div><div class="line">File requestFile = <span class="keyword">new</span> File(extDir, transferFile);</div><div class="line">requestFile.setReadable(<span class="keyword">true</span>, <span class="keyword">false</span>);</div><div class="line"><span class="comment">// Get a URI for the File and add it to the list of URIs</span></div><div class="line">fileUri = <span class="built_in">Uri</span>.fromFile(requestFile);</div><div class="line"><span class="keyword">if</span> (fileUri != <span class="keyword">null</span>) &#123;</div><div class="line">  mFileUris[<span class="number">0</span>] = fileUri;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  Log.e(<span class="string">"My Activity"</span>, <span class="string">"No File URI available for file."</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -431,7 +444,7 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
       
         <div class="post-tags">
           
-            <a href="/tags/文本操作栏/" rel="tag"># 文本操作栏</a>
+            <a href="/tags/Content-Sharing/" rel="tag"># Content Sharing</a>
           
         </div>
       
@@ -440,8 +453,8 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/26/singleton-design-pattern/" rel="next" title="单例模式的几种写法">
-                <i class="fa fa-chevron-left"></i> 单例模式的几种写法
+              <a href="/2017/02/17/custom-text-action/" rel="next" title="自定义文本操作栏action">
+                <i class="fa fa-chevron-left"></i> 自定义文本操作栏action
               </a>
             
           </div>
@@ -449,10 +462,6 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/19/send_file_through_nfc/" rel="prev" title="通过 NFC 分享文件之发送文件">
-                通过 NFC 分享文件之发送文件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -478,8 +487,8 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/17/custom-text-action/"
-           data-title="自定义文本操作栏action" data-url="http://bullettang.github.io/2017/02/17/custom-text-action/">
+      <div class="ds-thread" data-thread-key="2017/06/19/send_file_through_nfc/"
+           data-title="通过 NFC 分享文件之发送文件" data-url="http://bullettang.github.io/2017/06/19/send_file_through_nfc/">
       </div>
     
   </div>
@@ -599,7 +608,7 @@ http://developer.android.com/reference/android/content/Intent.html#ACTION_PROCES
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个action对应的Activity"><span class="nav-number">1.</span> <span class="nav-text">创建一个action对应的Activity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取选中的文本"><span class="nav-number">2.</span> <span class="nav-text">获取选中的文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">3.</span> <span class="nav-text">注意事项</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项"><span class="nav-number">1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#需求权限"><span class="nav-number">2.</span> <span class="nav-text">需求权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#需求硬件特性"><span class="nav-number">3.</span> <span class="nav-text">需求硬件特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检测设备是否支持-NFC"><span class="nav-number">4.</span> <span class="nav-text">检测设备是否支持 NFC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建提供文件的接口方法"><span class="nav-number">5.</span> <span class="nav-text">创建提供文件的接口方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置给-NfcAdapter"><span class="nav-number">6.</span> <span class="nav-text">设置给 NfcAdapter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何获取文件-URI"><span class="nav-number">7.</span> <span class="nav-text">如何获取文件 URI</span></a></li></ol></div>
             
 
           </div>
