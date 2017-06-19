@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Effective Java,Reading Notes," />
+  <meta name="keywords" content="Content Sharing," />
 
 
 
@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="《Effective Java》介绍了 57 条在 Java 编程中的经验准则。">
+<meta name="description" content="当 NFC 文件接收完成后，在接收设备上通知栏上会有一个包含 Action 为 ACTION_VIEW, 第一个传输的文件的 MIME 类型以及指向它的 URI的 Intent.用户点击该通知后，该 Intent 会向系统发出，要显示接收到的数据，需要响应该 Intent, 在对应的 &amp;lt;activity&amp;gt; 标签中添加 &amp;lt;intent-filter&amp;gt;元素.
+添加 intent">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《Effective Java》 Reading Notes">
-<meta property="og:url" content="http://bullettang.github.io/2017/01/19/Effective-Java-Reading-Notes/index.html">
+<meta property="og:title" content="通过 NFC 分享文件之接收文件">
+<meta property="og:url" content="http://bullettang.github.io/2017/06/19/receive_file_through_nfc/index.html">
 <meta property="og:site_name" content="BulletTang's Notes">
-<meta property="og:description" content="《Effective Java》介绍了 57 条在 Java 编程中的经验准则。">
-<meta property="og:updated_time" content="2017-01-19T07:07:17.426Z">
+<meta property="og:description" content="当 NFC 文件接收完成后，在接收设备上通知栏上会有一个包含 Action 为 ACTION_VIEW, 第一个传输的文件的 MIME 类型以及指向它的 URI的 Intent.用户点击该通知后，该 Intent 会向系统发出，要显示接收到的数据，需要响应该 Intent, 在对应的 &amp;lt;activity&amp;gt; 标签中添加 &amp;lt;intent-filter&amp;gt;元素.
+添加 intent">
+<meta property="og:updated_time" content="2017-06-19T10:21:15.088Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《Effective Java》 Reading Notes">
-<meta name="twitter:description" content="《Effective Java》介绍了 57 条在 Java 编程中的经验准则。">
+<meta name="twitter:title" content="通过 NFC 分享文件之接收文件">
+<meta name="twitter:description" content="当 NFC 文件接收完成后，在接收设备上通知栏上会有一个包含 Action 为 ACTION_VIEW, 第一个传输的文件的 MIME 类型以及指向它的 URI的 Intent.用户点击该通知后，该 Intent 会向系统发出，要显示接收到的数据，需要响应该 Intent, 在对应的 &amp;lt;activity&amp;gt; 标签中添加 &amp;lt;intent-filter&amp;gt;元素.
+添加 intent">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://bullettang.github.io/2017/01/19/Effective-Java-Reading-Notes/"/>
+  <link rel="canonical" href="http://bullettang.github.io/2017/06/19/receive_file_through_nfc/"/>
 
 
 
 
 
-  <title> 《Effective Java》 Reading Notes | BulletTang's Notes </title>
+  <title> 通过 NFC 分享文件之接收文件 | BulletTang's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +286,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://bullettang.github.io/2017/01/19/Effective-Java-Reading-Notes/">
+  <link itemprop="mainEntityOfPage" href="http://bullettang.github.io/2017/06/19/receive_file_through_nfc/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="BulletTang">
@@ -307,7 +310,7 @@
             
             
               
-                《Effective Java》 Reading Notes
+                通过 NFC 分享文件之接收文件
               
             
           </h2>
@@ -322,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-19T15:00:58+08:00">
-                2017-01-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-19T18:30:12+08:00">
+                2017-06-19
               </time>
             
 
@@ -345,8 +348,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/Content-Sharing/" itemprop="url" rel="index">
+                    <span itemprop="name">Content Sharing</span>
                   </a>
                 </span>
 
@@ -363,8 +366,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/19/Effective-Java-Reading-Notes/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/19/Effective-Java-Reading-Notes/" itemprop="commentCount"></span>
+                <a href="/2017/06/19/receive_file_through_nfc/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/19/receive_file_through_nfc/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -390,141 +393,12 @@
       
 
       
-        <p>《Effective Java》介绍了 57 条在 Java 编程中的经验准则。</p>
-<a id="more"></a>
-<h2 id="创建和销毁对象"><a href="#创建和销毁对象" class="headerlink" title="创建和销毁对象"></a>创建和销毁对象</h2><ul>
-<li><p>考虑用静态工厂方法代替构造函数</p>
-</li>
-<li><p>使用私有构造函数强化 singleton 属性</p>
-</li>
-<li><p>通过私有构造函数强化不可实例化的能力</p>
-</li>
-<li><p>避免创建重复的对象</p>
-</li>
-<li><p>消除过期的对象引用</p>
-</li>
-<li><p>避免使用终结函数</p>
-</li>
-</ul>
-<h2 id="对于所有对象都通用的方法"><a href="#对于所有对象都通用的方法" class="headerlink" title="对于所有对象都通用的方法"></a>对于所有对象都通用的方法</h2><ul>
-<li><p>改写 equals 的时候请遵守通用约定</p>
-</li>
-<li><p>改写 equals 时总是要改写 hashCode</p>
-</li>
-<li><p>总是要改写 toString</p>
-</li>
-<li><p>谨慎地改写 clone </p>
-</li>
-<li><p>考虑实现 Comparable 接口</p>
-</li>
-</ul>
-<h2 id="类和接口"><a href="#类和接口" class="headerlink" title="类和接口"></a>类和接口</h2><ul>
-<li><p>使类和成员的可访问能力最小化</p>
-</li>
-<li><p>支持非可变性</p>
-</li>
-<li><p>复合优于继承</p>
-</li>
-<li><p>要么专门为继承而设计，并给出文档说明，要么静止继承</p>
-</li>
-<li><p>接口优于抽象类</p>
-</li>
-<li><p>接口只是被用于定义类型</p>
-</li>
-<li><p>优先考虑静态成员类</p>
-</li>
-</ul>
-<h2 id="C语言结构的替代"><a href="#C语言结构的替代" class="headerlink" title="C语言结构的替代"></a>C语言结构的替代</h2><ul>
-<li><p>用类替代结构</p>
-</li>
-<li><p>用类层次来代替联合</p>
-</li>
-<li><p>用类来代替 enum 结构</p>
-</li>
-<li><p>用类和接口代替函数指针</p>
-</li>
-</ul>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ul>
-<li><p>检查参数的有效性</p>
-</li>
-<li><p>需要时使用保护性拷贝</p>
-</li>
-<li><p>谨慎设计方法的原型</p>
-</li>
-<li><p>谨慎地使用重载</p>
-</li>
-<li><p>返回零长度的数组而不是 null </p>
-</li>
-<li><p>为所有导出的API元素编写文档注释</p>
-</li>
-</ul>
-<h2 id="通用程序设计"><a href="#通用程序设计" class="headerlink" title="通用程序设计"></a>通用程序设计</h2><ul>
-<li><p>将局部变量的作用域最小化</p>
-</li>
-<li><p>了解和使用库</p>
-</li>
-<li><p>如果要求精确的答案，请避免使用 float 和 double</p>
-</li>
-<li><p>如果其他类型更合适，则尽量避免使用字符串</p>
-</li>
-<li><p>了解字符串连接的性能</p>
-</li>
-<li><p>通过接口引用对象</p>
-</li>
-<li><p>接口优于反射</p>
-</li>
-<li><p>谨慎地使用本地方法</p>
-</li>
-<li><p>谨慎地进行优化</p>
-</li>
-</ul>
-<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><ul>
-<li><p>只针对不正常的条件才使用异常</p>
-</li>
-<li><p>遵守普遍接受的命名惯例</p>
-</li>
-<li><p>对于可恢复的条件使用被检查的异常，对于程序错误使用运行时异常</p>
-</li>
-<li><p>避免不必要地使用被检查的异常</p>
-</li>
-<li><p>尽量使用标准的异常</p>
-</li>
-<li><p>抛出的异常要适合于相应的抽象</p>
-</li>
-<li><p>每个方法抛出的异常都要有文档</p>
-</li>
-<li><p>在细节消息中包含失败-捕获消息</p>
-</li>
-<li><p>努力使失败保持原子性</p>
-</li>
-<li><p>不要忽略异常</p>
-</li>
-</ul>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><ul>
-<li><p>对共享可变数据的同步访问</p>
-</li>
-<li><p>避免过多的同步</p>
-</li>
-<li><p>永远不要在循环的外面调用 wait</p>
-</li>
-<li><p>不要过度依赖于线程调度器</p>
-</li>
-<li><p>线程安全性的文档化</p>
-</li>
-<li><p>避免使用线程组</p>
-</li>
-</ul>
-<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><ul>
-<li><p>谨慎地实现 Serializable</p>
-</li>
-<li><p>考虑使用自定义的序列化形式</p>
-</li>
-<li><p>保护性地编写 readObject 方法</p>
-</li>
-<li><p>必要时提供一个 readResolve 方法</p>
-</li>
-</ul>
-
+        <p>当 NFC 文件接收完成后，在接收设备上通知栏上会有一个包含 Action 为 ACTION_VIEW, 第一个传输的文件的 MIME 类型以及指向它的 URI的 Intent.用户点击该通知后，该 Intent 会向系统发出，要显示接收到的数据，需要响应该 Intent, 在对应的 <code>&lt;activity&gt;</code> 标签中添加 <code>&lt;intent-filter&gt;</code>元素.</p>
+<h4 id="添加-intent-filter"><a href="#添加-intent-filter" class="headerlink" title="添加 intent-filter"></a>添加 intent-filter</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">activity</span></span></div><div class="line">    <span class="attr">android:name</span>=<span class="string">"com.example.android.nfctransfer.ViewActivity"</span></div><div class="line">    <span class="attr">android:label</span>=<span class="string">"Android Beam Viewer"</span> &gt;</div><div class="line">    ...</div><div class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.VIEW"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.DEFAULT"</span>/&gt;</span></div><div class="line">        ...</div><div class="line">    <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="需求权限"><a href="#需求权限" class="headerlink" title="需求权限"></a>需求权限</h4><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:<span class="built_in">name</span>=<span class="string">"android.permission.READ_EXTERNAL_STORAGE"</span> /&gt;</div></pre></td></tr></table></figure>
+<h4 id="验证-intent-来源"><a href="#验证-intent-来源" class="headerlink" title="验证 intent 来源"></a>验证 intent 来源</h4><p>Android Beam 文件传输会将接收的所有文件拷贝到一个目录。Android Beam 文件传输发送的内容 Intent中的URI指向第一个接收的文件。但是你的 APP 可能会收到不仅是来自 Android Beam 的 ACTION_VIEW Intent,所以需要验证 intent 的 schema 和 authority，以便决定如何处理。<br><a id="more"></a><br><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">    ...</div><div class="line">    <span class="comment">// A File object containing the path to the transferred files</span></div><div class="line">    <span class="keyword">private</span> <span class="type">File</span> mParentPath;</div><div class="line">    <span class="comment">// Incoming Intent</span></div><div class="line">    <span class="keyword">private</span> <span class="type">Intent</span> mIntent;</div><div class="line">    ...</div><div class="line">    <span class="comment">/*</span></div><div class="line">     * Called from onNewIntent() for a SINGLE_TOP Activity</div><div class="line">     * or onCreate() for a new Activity. For onNewIntent(),</div><div class="line">     * remember to call setIntent() to store the most</div><div class="line">     * current Intent</div><div class="line">     *</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> void handleViewIntent() &#123;</div><div class="line">        ...</div><div class="line">        <span class="comment">// Get the Intent action</span></div><div class="line">        mIntent = getIntent();</div><div class="line">        <span class="type">String</span> action = mIntent.getAction();</div><div class="line">        <span class="comment">/*</span></div><div class="line">         * For ACTION_VIEW, the Activity is being asked to display data.</div><div class="line">         * Get the URI.</div><div class="line">         */</div><div class="line">        <span class="keyword">if</span> (<span class="type">TextUtils</span>.equals(action, <span class="type">Intent</span>.<span class="type">ACTION_VIEW</span>)) &#123;</div><div class="line">            <span class="comment">// Get the URI from the Intent</span></div><div class="line">            <span class="type">Uri</span> beamUri = mIntent.getData();</div><div class="line">            <span class="comment">/*</span></div><div class="line">             * Test for the type of URI, by getting its scheme value</div><div class="line">             */</div><div class="line">            <span class="keyword">if</span> (<span class="type">TextUtils</span>.equals(beamUri.getScheme(), <span class="string">"file"</span>)) &#123;</div><div class="line">                mParentPath = handleFileUri(beamUri);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="type">TextUtils</span>.equals(</div><div class="line">                    beamUri.getScheme(), <span class="string">"content"</span>)) &#123;</div><div class="line">                mParentPath = handleContentUri(beamUri);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="从File-URI-得到目录"><a href="#从File-URI-得到目录" class="headerlink" title="从File URI 得到目录"></a>从File URI 得到目录</h4><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">    <span class="keyword">public</span> <span class="keyword">String</span> handleFileUri(Uri beamUri) &#123;</div><div class="line">        <span class="comment">// Get the path part of the URI</span></div><div class="line">        <span class="keyword">String</span> fileName = beamUri.getPath();</div><div class="line">        <span class="comment">// Create a File object for this filename</span></div><div class="line">        <span class="built_in">File</span> copiedFile = <span class="keyword">new</span> <span class="built_in">File</span>(fileName);</div><div class="line">        <span class="comment">// Get a string containing the file's parent directory</span></div><div class="line">        <span class="built_in">return</span> copiedFile.getParent();</div><div class="line">    &#125;</div><div class="line">    ...</div></pre></td></tr></table></figure>
+<h4 id="从Content-URI-得到目录"><a href="#从Content-URI-得到目录" class="headerlink" title="从Content URI 得到目录"></a>从Content URI 得到目录</h4><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line"><span class="keyword">public</span> <span class="keyword">String</span> handleContentUri(Uri beamUri) &#123;</div><div class="line">    <span class="comment">// Position of the filename in the query Cursor</span></div><div class="line">    int filenameIndex;</div><div class="line">    <span class="comment">// File object for the filename</span></div><div class="line">    File copiedFile;</div><div class="line">    <span class="comment">// The filename stored in MediaStore</span></div><div class="line">    <span class="keyword">String</span> fileName;</div><div class="line">    <span class="comment">// Test the authority of the URI</span></div><div class="line">    <span class="keyword">if</span> (!TextUtils.equals(beamUri.getAuthority(), MediaStore.AUTHORITY)) &#123;</div><div class="line">        <span class="comment">/*</span></div><div class="line">         * Handle content URIs for other content providers</div><div class="line">         */</div><div class="line">    <span class="comment">// For a MediaStore content URI</span></div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="comment">// Get the column that contains the file name</span></div><div class="line">        <span class="keyword">String</span>[] projection = &#123; MediaStore.MediaColumns.DATA &#125;;</div><div class="line">        Cursor pathCursor =</div><div class="line">                getContentResolver().query(beamUri, projection,</div><div class="line">                <span class="literal">null</span>, <span class="literal">null</span>, <span class="literal">null</span>);</div><div class="line">        <span class="comment">// Check for a valid cursor</span></div><div class="line">        <span class="keyword">if</span> (pathCursor != <span class="literal">null</span> &amp;&amp;</div><div class="line">                pathCursor.moveToFirst()) &#123;</div><div class="line">            <span class="comment">// Get the column index in the Cursor</span></div><div class="line">            filenameIndex = pathCursor.getColumnIndex(</div><div class="line">                    MediaStore.MediaColumns.DATA);</div><div class="line">            <span class="comment">// Get the full file name including path</span></div><div class="line">            fileName = pathCursor.getString(filenameIndex);</div><div class="line">            <span class="comment">// Create a File object for the filename</span></div><div class="line">            copiedFile = <span class="keyword">new</span> <span class="type">File</span>(fileName);</div><div class="line">            <span class="comment">// Return the parent directory of the file</span></div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="type">File</span>(copiedFile.getParent());</div><div class="line">         &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="comment">// The query didn't work; return null</span></div><div class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line">         &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">...</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -547,9 +421,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Effective-Java/" rel="tag"># Effective Java</a>
-          
-            <a href="/tags/Reading-Notes/" rel="tag"># Reading Notes</a>
+            <a href="/tags/Content-Sharing/" rel="tag"># Content Sharing</a>
           
         </div>
       
@@ -558,8 +430,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/13/git-usage/" rel="next" title="Git 常用命令">
-                <i class="fa fa-chevron-left"></i> Git 常用命令
+              <a href="/2017/06/19/send_file_through_nfc/" rel="next" title="通过 NFC 分享文件之发送文件">
+                <i class="fa fa-chevron-left"></i> 通过 NFC 分享文件之发送文件
               </a>
             
           </div>
@@ -567,10 +439,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/26/singleton-design-pattern/" rel="prev" title="单例模式的几种写法">
-                单例模式的几种写法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -596,8 +464,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/19/Effective-Java-Reading-Notes/"
-           data-title="《Effective Java》 Reading Notes" data-url="http://bullettang.github.io/2017/01/19/Effective-Java-Reading-Notes/">
+      <div class="ds-thread" data-thread-key="2017/06/19/receive_file_through_nfc/"
+           data-title="通过 NFC 分享文件之接收文件" data-url="http://bullettang.github.io/2017/06/19/receive_file_through_nfc/">
       </div>
     
   </div>
@@ -717,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建和销毁对象"><span class="nav-number">1.</span> <span class="nav-text">创建和销毁对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于所有对象都通用的方法"><span class="nav-number">2.</span> <span class="nav-text">对于所有对象都通用的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类和接口"><span class="nav-number">3.</span> <span class="nav-text">类和接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C语言结构的替代"><span class="nav-number">4.</span> <span class="nav-text">C语言结构的替代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">5.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用程序设计"><span class="nav-number">6.</span> <span class="nav-text">通用程序设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常"><span class="nav-number">7.</span> <span class="nav-text">异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程"><span class="nav-number">8.</span> <span class="nav-text">线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化"><span class="nav-number">9.</span> <span class="nav-text">序列化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加-intent-filter"><span class="nav-number">1.</span> <span class="nav-text">添加 intent-filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#需求权限"><span class="nav-number">2.</span> <span class="nav-text">需求权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#验证-intent-来源"><span class="nav-number">3.</span> <span class="nav-text">验证 intent 来源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从File-URI-得到目录"><span class="nav-number">4.</span> <span class="nav-text">从File URI 得到目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从Content-URI-得到目录"><span class="nav-number">5.</span> <span class="nav-text">从Content URI 得到目录</span></a></li></ol></div>
             
 
           </div>
